@@ -1,11 +1,11 @@
-function Employee (prenom, nom, pays='Belgique', baseSalaire=1500){
+function Employee (prenom, nom, pays='Belgique', base=1500){
     let hireDate = new Date();
     let calculSalaire = function(){
         var today = new Date();
         return baseSalaire + (baseSalaire * ((today.getYear() - hireDate.getYear()) * 0.5))
     };
 
-    this.baseSalaire = baseSalaire;
+    let baseSalaire = base;
     this.prenom = prenom;
     this.nom = nom;
     this.pays = pays;
@@ -30,8 +30,21 @@ function Employee (prenom, nom, pays='Belgique', baseSalaire=1500){
         get : function(){
             return calculSalaire();
         }
-    })
+    }); 
+    Object.defineProperty(this, 'baseSalaire', {
+        get: function() {
+            return baseSalaire;
+        },
+        set : function(newSalaire) {
+           if(typeof(newSalaire) == 'number' && newSalaire > baseSalaire) {
+            baseSalaire = newSalaire;
+           } else {
+            console.log("le salaire n'est pas correct par rapport au précédent.")
+           };
+        }
+    });
 }
 let employees = new Employee('Hans', 'Surless', 'France');
 // console.log(employee.getHireDate());
-console.log(employees)
+employees.baseSalaire= 1559
+console.log(employees.salariee)
