@@ -1,0 +1,22 @@
+[
+    {
+        "firstName": "Damien",
+        "nom": "formateur",
+        "pays": "Belgique"
+    },
+    {
+        "firstName": "youssef",
+        "nom": "jensesaipas",
+        "pays": "France"
+    },
+    {
+        "firstName": "Benoit",
+        "nom": "dupont",
+        "pays": "Suisse"
+    },
+    {
+        "firstName": "Hélène",
+        "nom": "Segara",
+        "pays": "Suisse"
+    }
+]

@@ -31,8 +31,8 @@ for (let i = 0 ; i< 1 ; i++){
     }
 }
 
-console.log(coup_ordi)
-console.log(resultat)
+console.log(coup_ordi);
+console.log(resultat);
 
 // EXERCICE VEGETA
 
